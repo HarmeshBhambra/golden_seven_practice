@@ -1,0 +1,49 @@
+<form class="form-horizontal" action="http://localhost:3000/update_farmer/<%= @i.id %>">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" value="<%= @i.first_name %>" name="first_name">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" value="<%= @i.last_name %>" name="last_name">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Address</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" value="<%= @i.address %>" name="address">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">State</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" value="<%= @i.state %>" name="state">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Size</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" value="<%= @i.size %>" name="size">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Rental Rate</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" value="<%= @i.rental_rate %>" name="rental_rate">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Notes</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" rows="3" name="notes"><%= @i.notes %></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,32 @@
+<h1>Available Land</h1>
+
+<a href="http://localhost:3000/farmers/new">Add new Land</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1">First Name</div>
+        <div class="col-sm-1">Last Name</div>
+        <div class="col-sm-1">State</div>
+        <div class="col-sm-1">Size</div>
+        <div class="col-sm-2">Rental Rate</div>
+        <div class="col-sm-4">Notes</div>
+        <div class="col-sm-2">Actions</div>
+    </div>
+    <% @list_of_farmers.each do |farmer| %>
+    <div class="row">
+        <div class="col-sm-1"> <%= farmer.first_name %> </div>
+        <div class="col-sm-1">
+            <p><%= farmer.last_name %></p>
+        </div>
+        <div class="col-sm-1"> <%= farmer.state %> </div>
+        <div class="col-sm-1"> <%= farmer.size %> </div>
+        <div class="col-sm-2"> <%= farmer.rental_rate %> </div>
+        <div class="col-sm-4"> <%= farmer.notes %> </div>
+        <div class="col-sm-2">
+            <a href="http://localhost:3000/farmers/<%= farmer.id %>">Read</a>
+            <a href="http://localhost:3000/farmers/edit_form/<%= farmer.id %>">Edit</a>
+            <a href="http://localhost:3000/farmers/delete/<%= farmer.id %>">Delete</a>
+        </div>
+    </div>
+    <% end %>
+</div>
